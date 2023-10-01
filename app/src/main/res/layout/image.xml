@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image1Card"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginHorizontal="10dp"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="20dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/exit" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:id="@+id/image2Card"
+
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+
+            android:layout_marginHorizontal="10dp"
+            app:cardCornerRadius="20dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/exit" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:id="@+id/image3Card"
+
+            android:layout_height="110dp"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+
+            android:layout_marginHorizontal="10dp"
+            app:cardCornerRadius="20dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/image3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/exit" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

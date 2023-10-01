@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_pink"
+    android:background="@drawable/purple"
     tools:context=".Registration">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +25,6 @@
             android:text="Регистрация"
             android:textColor="@color/grey"
             android:textSize="30sp"
-            android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +39,6 @@
             android:hint="Имя пользователя"
             android:textColor="@color/grey"
             android:textColorHint="@color/grey"
-            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registration_text" />
@@ -53,10 +51,8 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
             android:hint="Ваш email"
-            android:inputType="textPassword"
             android:textColor="@color/grey"
             android:textColorHint="@color/grey"
-            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/username" />
@@ -72,7 +68,6 @@
             android:inputType="textPassword"
             android:textColor="@color/grey"
             android:textColorHint="@color/grey"
-            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email" />
@@ -87,24 +82,22 @@
             android:inputType="textPassword"
             android:textColor="@color/grey"
             android:textColorHint="@color/grey"
-            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password" />
+
         <Button
             android:id="@+id/registerInBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="50dp"
-            android:backgroundTint="@color/white"
             android:layout_marginTop="100dp"
+            android:backgroundTint="@color/white"
             android:text="Войти"
-            android:textColor="@color/purple_200"
+            android:textColor="@color/purple"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/confirm_password" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
     <ImageView
         android:id="@+id/imageView2"
@@ -124,6 +117,7 @@
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/material_drawer_circle_mask">
 
         <TextView
@@ -134,10 +128,9 @@
             android:layout_margin="40dp"
             android:layout_marginStart="10dp"
             android:text="Привет, у тебя уже есть аккаунт?"
-            android:textColor="@color/purple_200"
-            android:textSize="30sp"
+            android:textColor="@color/purple"
+            android:textSize="25sp"
             android:textStyle="bold" />
-
     </androidx.cardview.widget.CardView>
 
 

@@ -1,14 +1,17 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.net.Uri.encode
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 
 class Registration : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,11 +51,20 @@ class Registration : AppCompatActivity() {
         if (usernameInput.text.toString().count() < 4) {
             showError("Вы указали меньше 4 символов", usernameInput)
         } else {
+            FirebaseDatabase.getInstance().reference.child("Users").get().addOnSuccessListener {
+                for (child in it.children) {
+                    if (child.child("email").value.toString() == emailInput.text.toString()) {
+                        showError("Это адрес уже используется", emailInput)
+                    }
+                }
+            }
             if ((!emailInput.text!!.toString()
                     .matches(emailPattern.toRegex())) || (emailInput.text.toString() == "")
             ) {
                 showError("Некорректный адрес", emailInput)
-            } else {
+
+            }
+            else {
                 if ((passwordInput.text.toString() != confirmPasswordInput.text.toString())) {
                     showError("Пароли не совпадают", confirmPasswordInput)
                 } else {
@@ -70,16 +82,29 @@ class Registration : AppCompatActivity() {
                                     val dataMap: MutableMap<String, Any> =
                                         LinkedHashMap<String, Any>()
 
-                                    dataMap["username"] = usernameInput.text.toString()
+                                    dataMap["username"] = encode(usernameInput.text.toString())
                                     dataMap["email"] = emailInput.text.toString()
                                     dataMap["uid"] = mAuth.currentUser!!.uid
+                                    dataMap["accountImageType"] = "null"
+                                    dataMap["theme"] = "purple"
+
 
                                     firebaseDatabase.reference.child("Users")
                                         .child(mAuth.currentUser!!.uid)
                                         .setValue(dataMap)
+                                    FirebaseMessaging.getInstance().token.addOnCompleteListener {
+                                        if (it.isSuccessful) {
+                                            FirebaseDatabase.getInstance().reference.child("Users")
+                                                .child(FirebaseAuth.getInstance().currentUser!!.uid).child("token")
+                                                .setValue(it.result.toString())
+                                        }
+                                    }
                                     mAuth!!.currentUser!!.sendEmailVerification()
 
-                                    startActivity(Intent(this, MainActivity::class.java))
+
+                                    val intent = Intent(this@Registration, MainActivity::class.java)
+                                    intent.putExtra("firstTime", "yes")
+                                    startActivity(intent)
                                     finish()
                                 }
                             }

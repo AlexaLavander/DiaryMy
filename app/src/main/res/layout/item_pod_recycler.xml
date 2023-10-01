@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@android:color/transparent"
+    android:foreground="@android:color/transparent"
+    android:outlineAmbientShadowColor="@android:color/white"
+    android:outlineSpotShadowColor="@android:color/white"
+    app:strokeWidth="4dp"
+    app:cardCornerRadius="30dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gif"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:tint="@color/purple"
+                android:src="@drawable/baseline_account_circle_24" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/baseline_account_circle_24"
+                android:tint="@color/purple_200"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/storyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="test"
+                android:textColor="@color/purple_200"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="204dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/person1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/purple"
+                    android:src="@drawable/baseline_account_circle_24"
+                    />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/person2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/purple"
+                    android:src="@drawable/baseline_account_circle_24"
+                    />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/person3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/purple"
+                    android:src="@drawable/baseline_account_circle_24"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/first_photo"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+         />
+</com.google.android.material.card.MaterialCardView>

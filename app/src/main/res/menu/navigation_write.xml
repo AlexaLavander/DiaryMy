@@ -14,7 +14,7 @@
         android:title="" />
     <item
         android:id="@+id/choose_theme"
-        android:icon="@drawable/baseline_wallpaper_24"
+        android:icon="@drawable/baseline_public_24"
         android:title="" />
     <item
         android:id="@+id/add_person"

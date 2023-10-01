@@ -13,8 +13,8 @@
         android:id="@+id/placeholder"
         android:title="" />
     <item
-        android:id="@+id/photo"
-        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_public_24"
         android:title="" />
     <item
         android:id="@+id/mAccount"

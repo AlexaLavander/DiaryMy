@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Редактировать"
+        android:id="@+id/edit"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_edit_24"
+        android:iconTint="@color/white"
+        />
+
+    <item
+        android:title="Предложения"
+        android:id="@+id/ideas"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_tungsten_24"
+        android:iconTint="@color/white"
+        />
+    <item
+        android:title="Следить"
+        android:id="@+id/favourite"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_remove_red_eye_24"
+        android:iconTint="@color/white"
+        />
+</menu>

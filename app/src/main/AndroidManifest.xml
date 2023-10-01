@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,19 +15,58 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Images"
+            android:exported="false" />
+        <activity
+            android:name=".ChangeData"
+            android:exported="false" />
+        <activity
+            android:name=".ReadIdeas"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Public"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Friends"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewFriend"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddPerson"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ReadActivty"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyProfile"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".WriteNote"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Login_Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Registration"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

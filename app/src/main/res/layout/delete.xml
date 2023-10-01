@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_margin="20dp"
+                android:textSize="23sp"
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вы хотите удалить запись?"/>
+            <TextView
+                android:layout_margin="10dp"
+                android:textSize="23sp"
+                android:id="@+id/no"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Оставить запись"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:gravity="right"
+                android:id="@+id/yes"
+                android:textSize="23sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Удалить запись"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>
